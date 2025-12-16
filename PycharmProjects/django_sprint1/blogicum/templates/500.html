@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Ошибка обращения к серверу{% endblock %}
+{% block content %}
+  <div class="center-block text-center">
+    <h1>Ошибка обращения к серверу</h1>
+    <p>Попробуйте обновить страницу через некоторое время<br>
+      или вернуться на <a href="{% url 'blog:index' %}">главную страницу.</a></p>
+    <b>Код ошибки: 500</b>
+  </div>
+{% endblock %}

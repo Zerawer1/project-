@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.location }}. {{ post.date }}{% endblock %}
+{% block content %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'blog:index' %}">Лента записей</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">{{ post.location }}. {{ post.date }}</li>
+    </ol>
+    <hr>
+  </nav>
+  <h1>{{ post.location }}. {{ post.date }}</h1>
+  <br>
+  <article>
+    <ul>
+      <li>Место: {{ post.location }}</li>
+      <li>Дата: {{ post.date }}</li>
+      <li>
+        Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
+      </li>
+    </ul>
+    <p>{{ post.text }}</p>
+  </article>
+{% endblock %}
