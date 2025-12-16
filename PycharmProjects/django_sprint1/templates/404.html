@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Нет такой страницы{% endblock %}
+{% block content %}
+  <div class="center-block text-center">
+    <h1>Тут ничего нет</h1>
+    <p>Вероятно, это произошло из-за опечатки в адресе.<br>
+      Попробуйте вернуться назад или на <a href="{% url 'blog:index' %}">главную страницу.</a></p>
+    <img src="{% static 'img/404-image.png' %}" width="300" alt="">
+    <b>Код ошибки: 404</b>
+  </div>
+{% endblock %}
